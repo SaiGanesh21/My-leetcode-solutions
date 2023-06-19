@@ -4,13 +4,15 @@ class Solution:
         cols=len(grid[0])
         if grid[0][0] or grid[rows-1][cols-1]:
             return -1
-        q=deque()
+        q=[]
         q.append((0,0,1))
         visit=set()
         visit.add((0,0))
         directions=[[1,0],[0,1],[0,-1],[-1,0],[1,1],[1,-1],[-1,1],[-1,-1]]
-        while q:
-                r,c,dist=q.popleft()
+
+        while q!=[]:
+                # print(q)
+                r,c,dist=q.pop(0)
                 if r==rows-1 and c==cols-1:
                     return dist
                 for dr,dc in directions:
