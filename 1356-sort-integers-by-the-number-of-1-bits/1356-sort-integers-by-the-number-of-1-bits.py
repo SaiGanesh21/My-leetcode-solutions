@@ -1,7 +1,7 @@
 class Solution:
     def sortByBits(self, arr: List[int]) -> List[int]:
-#         arr.sort()
-#         d=defaultdict(int)
+        arr.sort()
+
 #         for x in arr:
 #             d[bin(x)[2:].count("1")].append(x)
 #         print(d)
@@ -13,4 +13,5 @@ class Solution:
         
         
         
-        return sorted(arr, key=lambda x: (x.bit_count(),x))
+        return sorted(arr, key=lambda x: x.bit_count())
+    # return sorted(sorted(arr), key=lambda x: bin(x).count('1'))
