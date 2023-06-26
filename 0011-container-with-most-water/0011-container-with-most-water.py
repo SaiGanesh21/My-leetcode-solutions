@@ -7,9 +7,7 @@ class Solution:
             maxs=max(maxs,(min(height[l],height[r])*(r-l)))
             if height[l]<=height[r]:
                 l+=1
-            else:
+            elif height[l]>height[r]:
                 r-=1
         return maxs
-
-            
       
