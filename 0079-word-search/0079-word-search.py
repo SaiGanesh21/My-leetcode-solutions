@@ -1,7 +1,7 @@
 class Solution:
     
     def dfs(self,board,word,row,col,index):
-        if index>=len(word):
+        if index==len(word):
             return True
         if row<0 or row>=len(board) or col<0 or col>=len(board[0]) or board[row][col]!=word[index]:
             return False
