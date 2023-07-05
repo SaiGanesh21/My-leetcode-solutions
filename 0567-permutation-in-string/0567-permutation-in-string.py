@@ -1,7 +1,7 @@
 class Solution:
     def checkInclusion(self, s1: str, s2: str) -> bool:
         if len(s1)>len(s2):
-            return []
+            return False
         output=[]
         s1freq=[0]*26
         s2freq=[0]*26
