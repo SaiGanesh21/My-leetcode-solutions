@@ -5,7 +5,7 @@ class Solution:
         if grid[0][0] or grid[rows-1][cols-1]:
             return -1
         q=[]
-        q.append((0,0,1))
+        q.append([0,0,1])
         visit=set()
         visit.add((0,0))
         directions=[[1,0],[0,1],[0,-1],[-1,0],[1,1],[1,-1],[-1,1],[-1,-1]]
@@ -20,7 +20,7 @@ class Solution:
                     col=dc+c
                     if 0<=row<rows and 0<=col<cols and (row,col) not in visit and grid[row][col]==0:
                             visit.add((row,col))
-                            q.append((row,col,dist+1))
+                            q.append([row,col,dist+1])
         return -1
                 
                 
