@@ -1,5 +1,61 @@
 class Solution:
     def isValid(self, s: str) -> bool:
+        d={")":"(", "]":"[", "}":"{"}
+        stack=[]
+        for x in s:
+            if x not in d:
+                stack.append(x)
+            elif stack and stack[-1]==d[x]:
+                stack.pop()
+            else:
+                return False
+        if len(stack)==0:
+            return True
+        return False
+                    
+                
+
+                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         stack=[]
         mapping={')':'(', '}':'{', ']':'['}
         for x in s:
