@@ -1,11 +1,11 @@
 class Solution:
-    def find_rec(self,n1,n2,s,found):
-        if s=="" and found:
+    def find_rec(self,n1,n2,s):
+        if s=="":
             return True
         n3=str(n1+n2)
         idx=len(n3)
         if s[0:idx]==n3:
-            return self.find_rec(n2,int(n3),s[idx:],True)
+            return self.find_rec(n2,int(n3),s[idx:])
         return False
     def isAdditiveNumber(self, num: str) -> bool:
         n=len(num)
@@ -17,8 +17,7 @@ class Solution:
                 n2=int(num[i:j])
                 if str(n2)!=num[i:j]:
                     break
-                found=self.find_rec(n1,n2,num[j:],False)
-                if found:
+                if self.find_rec(n1,n2,num[j:]):
                     return True
         return False
 
