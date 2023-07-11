@@ -3,9 +3,8 @@ class Solution:
         if s=="":
             return True
         n3=str(n1+n2)
-        idx=len(n3)
-        if s[0:idx]==n3:
-            return self.find_rec(n2,int(n3),s[idx:])
+        if s[0:len(n3)]==n3:
+            return self.find_rec(n2,int(n3),s[len(n3):])
         return False
     def isAdditiveNumber(self, num: str) -> bool:
         n=len(num)
