@@ -18,7 +18,8 @@ class Solution:
                 for dr,dc in directions:
                     row=dr+r
                     col=dc+c
-                    if 0<=row<rows and 0<=col<cols and (row,col) not in visit and grid[row][col]==0:
+                    if 0<=row<rows and 0<=col<cols and (row,col) not in visit and grid[row][col]==0:      
+                            
                             visit.add((row,col))
                             q.append([row,col,dist+1])
         return -1
