@@ -14,7 +14,7 @@ class Solution:
         for r in range(rows):
             dfs(r,0)
             dfs(r,cols-1)
-        for c in range(1,cols):
+        for c in range(1,cols-1):
             dfs(0,c)
             dfs(rows-1,c)
           
