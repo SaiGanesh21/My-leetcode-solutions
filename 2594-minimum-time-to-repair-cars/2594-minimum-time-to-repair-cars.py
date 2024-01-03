@@ -4,7 +4,7 @@ class Solution:
         def ispossible(ranks,cars,mid):
             cars1=0
             for x in ranks:
-                cars1+= int(sqrt(mid//x))
+                cars1+= int(math.sqrt(mid//x))
             return cars1>=cars
                 
         
