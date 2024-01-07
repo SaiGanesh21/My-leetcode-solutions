@@ -19,10 +19,10 @@ class Solution:
         while l<=h:
             mid=(l+h)//2
             if ispossible(mid,price,k):
-                ans=mid
+                # ans=mid
                 l=mid+1
             else:
                 h=mid-1
-        return ans
+        return h
             
         
