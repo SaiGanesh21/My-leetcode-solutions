@@ -6,7 +6,7 @@ class Solution:
             c=0
             n=len(dist)
             for i in range(n-1):
-                c+=math.ceil(dist[i]/m)
+                c+=ceil(dist[i]/m)
             c+=dist[n-1]/m
             return c<=hour
         
